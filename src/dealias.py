@@ -23,8 +23,8 @@ class VelocityDealiaser(tf.keras.Model):
 
     This model takes as input a dict
       {
-        'degraded_N0U':    degraded L3 velocity of shape [batch, n_times, n_az, n_rad, 1]
-        'nyq':             nyquist velocitys used for degradation w/shape [batch,n_times,1]
+        'vel':    Aliased velocity of shape [batch, n_times, n_az, n_rad, 1]
+        'nyq':    nyquist velocitys used for degradation w/shape [batch,n_times,1]
       }
 
     """
