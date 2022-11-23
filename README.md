@@ -1,4 +1,4 @@
-# Deep Learning-based Velocity Dealiasor for Weather Radar
+# Deep Learning-based Velocity Dealiaser for Weather Radar
 
 This repo contains the a pretrained model, sample code, and sample data for the paper "A Deep Learning-based Velocity Dealiasing Algorithm Derived from the WSR-88D Open Radar Product Generator"
 
