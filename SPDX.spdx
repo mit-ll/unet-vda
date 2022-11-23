@@ -1,0 +1,6 @@
+SPDXVersion: SPDX-2.1
+    PackageName: Deep Learning-based Velocity Dealiasor for Weather Radar
+    PackageHomePage: https://github.com/mit-ll/unet-vda
+    PackageOriginator: MIT Lincoln Laboratory
+    PackageCopyrightText: 2022 Massachusetts Institute of Technology
+    PackageLicenseDeclared: MIT
