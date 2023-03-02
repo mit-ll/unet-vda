@@ -16,6 +16,7 @@ Delivered to the U.S. Government with Unlimited Rights, as defined in DFARS Part
 """
 
 import tensorflow as tf
+from packaging import version
 
 class VelocityDealiaser(tf.keras.Model):
     """
@@ -35,7 +36,10 @@ class VelocityDealiaser(tf.keras.Model):
         self.extractor=extractor
         self.upsampler=upsampler
         self.alias_loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True)
-        self.optimizer=tf.keras.optimizers.Adam()
+        if version.parse(tf.__version__) >= version.parse("2.11.0"):
+            self.optimizer = tf.keras.optimizers.legacy.Adam()
+        else:
+            self.optimizer = tf.keras.optimizers.Adam()
     def call(self, inputs):
         """
         Inputs is a dict:
