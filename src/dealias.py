@@ -36,11 +36,10 @@ class VelocityDealiaser(tf.keras.Model):
         self.extractor=extractor
         self.upsampler=upsampler
         self.alias_loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True)
-        if version.parse(tf.__version__) >= version.parse('2.11'):
-            self.optimizer=tf.keras.optimizers.legacy.Adam
+        if version.parse(tf.__version__) >= version.parse("2.11.0"):
+            self.optimizer = tf.keras.optimizers.legacy.Adam()
         else:
-            self.optimizer=tf.keras.optimizers.Adam()
-        
+            self.optimizer = tf.keras.optimizers.Adam()
     def call(self, inputs):
         """
         Inputs is a dict:
